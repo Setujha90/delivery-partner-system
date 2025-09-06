@@ -31,7 +31,7 @@ This project provides a simple backend system for managing delivery partners, or
    npm run dev
    ```        
 
-The server will start on `http://localhost:3000` (or the port you specified).
+The server will start on `http://localhost:<PORT>` ( the port you specified).
 
 ---
 
@@ -40,6 +40,11 @@ The server will start on `http://localhost:3000` (or the port you specified).
 http://localhost:PORT/api/
 ```
 Replace `PORT` with your server's port number.
+
+---
+
+## Postman Collection
+https://www.postman.com/aviation-physicist-55699815/workspace/setu/collection/46319101-91df0a1b-5e81-442c-b980-e6c7e10dbd6d?action=share&creator=46319101
 
 ---
 
@@ -267,11 +272,6 @@ Some endpoints require authentication via Bearer Token in the `Authorization` he
   }
 }
 ```
-
----
-
-## Postman Collection
-A Postman collection can be generated on request. Please let us know if you need it.
 
 ---
 
