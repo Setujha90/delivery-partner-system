@@ -22,7 +22,7 @@ This project provides a simple backend system for managing delivery partners, or
 3. Create a `.env` file in the root directory and add the following environment variables:
    ```
    PORT=3000
-   MONGODB_URI=your_mongodb_connection_string
+   MONGODB_URI=your_mongodb_connection_string(eg: mongodb+srv://<user>:<password>@cluster.mongodb.net/deliveryDB)
    JWT_SECRET=your_jwt_secret
    ```
 
