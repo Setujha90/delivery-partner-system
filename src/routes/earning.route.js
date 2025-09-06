@@ -1,7 +1,6 @@
-
 import { Router } from "express";
 import { getTodaysEarnings, getEarningHistory } from "../controllers/earning.controller.js";
-import { protectPartner  } from '../middlewares/auth.middleware.js';
+import { protectPartner } from '../middlewares/auth.middleware.js';
 
 const earningRouter = Router();
 

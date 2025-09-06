@@ -156,7 +156,7 @@ Some endpoints require authentication via Bearer Token in the `Authorization` he
 ```json
 {
   "success": true,
-  "order": { "orderId": "...", ... }
+  "order": { "orderId": "...", "status": "pending", ... }
 }
 ```
 

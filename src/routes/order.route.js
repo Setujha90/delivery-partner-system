@@ -10,7 +10,7 @@ import { protectPartner } from '../middlewares/auth.middleware.js';
 
 const orderRouter = Router();
 
-orderRouter.post("/", createOrder); 
+orderRouter.post("/", createOrder);
 orderRouter.get("/available", protectPartner, getAvailableOrders);
 orderRouter.post("/:id/accept", protectPartner, acceptOrder);
 orderRouter.put("/:id/status", protectPartner, updateOrderStatus);

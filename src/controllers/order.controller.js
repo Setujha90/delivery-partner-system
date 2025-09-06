@@ -13,13 +13,12 @@ export const createOrder = asyncHandler(async (req, res) => {
     return new ApiResponse(STATUS_CODE.CREATED, "Order created successfully", order).send(res);
 });
 
-// Get all available (unassigned) orders
+// Get available orders
 export const getAvailableOrders = asyncHandler(async (req, res) => {
     const orders = await Order.find({ status: "pending" });
     return new ApiResponse(STATUS_CODE.OK, "Available orders fetched", orders).send(res);
 });
 
-// Partner accepts an order
 export const acceptOrder = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const partnerId = req.partner._id;
@@ -39,7 +38,7 @@ export const acceptOrder = asyncHandler(async (req, res) => {
 
 });
 
-// Update order status (picked / delivered)
+// Update order status (picked up or delivered)
 export const updateOrderStatus = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const { status } = req.body;
@@ -90,7 +89,7 @@ export const updateOrderStatus = asyncHandler(async (req, res) => {
     return new ApiResponse(STATUS_CODE.OK, `Order marked as ${status}`, order).send(res);
 });
 
-// Get orders assigned to current partner
+// Get my orders
 export const getMyOrders = asyncHandler(async (req, res) => {
     const partnerId = req.partner._id;
     const orders = await Order.find({ assignedPartnerId: partnerId });

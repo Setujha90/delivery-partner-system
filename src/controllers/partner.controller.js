@@ -3,8 +3,8 @@ import Partner from '../models/partner.model.js';
 import generateToken from '../utils/generatetoken.js';
 import ApiError from '../utils/ApiError.js';
 import ApiResponse from '../utils/ApiResponse.js';
-import  asyncHandler  from '../utils/asynchandler.js';
-import {STATUS_CODE} from '../utils/statuscode.const.js';
+import asyncHandler from '../utils/asynchandler.js';
+import { STATUS_CODE } from '../utils/statuscode.const.js';
 import { zodValidator } from '../utils/zodValidator.js';
 import { registerSchema, loginSchema, updateStatusSchema, updateLocationSchema } from '../zodschema/authschema.js';
 
@@ -21,8 +21,8 @@ export const registerPartner = asyncHandler(async (req, res) => {
     const partner = await Partner.create(
         { name, email, phone, password: hashedPassword, vehicleType }
     );
-    
-    if(!partner) {
+
+    if (!partner) {
         throw new ApiError(STATUS_CODE.INTERNAL_SERVER_ERROR, 'Failed to create partner');
     }
 
@@ -75,7 +75,7 @@ export const updatePartnerStatus = asyncHandler(async (req, res) => {
 
 // Update Partner Location
 export const updatePartnerLocation = asyncHandler(async (req, res) => {
-    const partner = req.partner;    
+    const partner = req.partner;
     if (!partner) {
         throw new ApiError(STATUS_CODE.NOT_FOUND, 'Partner not found');
     }

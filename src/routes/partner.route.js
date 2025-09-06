@@ -1,5 +1,5 @@
-import {Router} from 'express';
-import { registerPartner, loginPartner, getPartnerProfile, updatePartnerStatus, updatePartnerLocation} from '../controllers/partner.controller.js';
+import { Router } from 'express';
+import { registerPartner, loginPartner, getPartnerProfile, updatePartnerStatus, updatePartnerLocation } from '../controllers/partner.controller.js';
 import { protectPartner } from '../middlewares/auth.middleware.js';
 
 const partnerRouter = Router();

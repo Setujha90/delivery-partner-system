@@ -5,7 +5,7 @@ import ApiResponse from "../utils/ApiResponse.js";
 import ApiError from "../utils/ApiError.js";
 import { STATUS_CODE } from '../utils/statuscode.const.js';
 
-// Get partner dashboard data
+
 export const getPartnerDashboard = asyncHandler(async (req, res) => {
     const partnerId = req.partner._id;
 

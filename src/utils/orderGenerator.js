@@ -2,14 +2,18 @@ import Order from "../models/order.model.js";
 
 const customerNames = ["Vishal", "Setu", "Akash", "Pratik", "Vivek", "Amit", "Neha", "Rajesh", "Saumya", "Karan", "Sneha"];
 const addresses = [
-    "Patna, Bihar",
-    "Gaya, Bihar",
-    "Bhagalpur, Bihar",
-    "Madhubani, Bihar",
-    "Darbhanga, Bihar",
-    "Muzaffarpur, Bihar",
-    "Purnia, Bihar",
-    "Ranchi, Jharkhand",
+    "Salt Lake, Kolkata",
+    "Park Street, Kolkata",
+    "Howrah, Kolkata",
+    "New Town, Kolkata",
+    "Dum Dum, Kolkata",
+    "Garia, Kolkata",
+    "Tollygunge, Kolkata",
+    "Ballygunge, Kolkata",
+    "Jadavpur, Kolkata",
+    "Behala, Kolkata",
+    "Sealdah, Kolkata",
+    "Esplanade, Kolkata"
 ];
 
 function getRandomElement(arr) {

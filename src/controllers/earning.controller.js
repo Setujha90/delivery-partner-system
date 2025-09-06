@@ -1,4 +1,3 @@
-// src/controllers/earning.controller.js
 import Payment from "../models/payment.model.js";
 import asyncHandler from "../utils/asynchandler.js";
 import ApiResponse from "../utils/ApiResponse.js";
@@ -6,7 +5,7 @@ import ApiError from "../utils/ApiError.js";
 
 export const getTodaysEarnings = asyncHandler(async (req, res) => {
     const partnerId = req.partner._id;
-    if(!partnerId) {
+    if (!partnerId) {
         throw new ApiError(400, "Partner is not authenticated");
     }
 
@@ -29,7 +28,7 @@ export const getTodaysEarnings = asyncHandler(async (req, res) => {
 
 export const getEarningHistory = asyncHandler(async (req, res) => {
     const partnerId = req.partner._id;
-    if(!partnerId) {
+    if (!partnerId) {
         throw new ApiError(400, "Partner is not authenticated");
     }
     const payments = await Payment.find({ partnerId }).sort({ date: -1 });
